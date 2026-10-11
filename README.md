@@ -1,5 +1,7 @@
 # SQLyog No Popup
 
+**简体中文** | [English](README.en.md)
+
 去掉 **SQLyog 社区版退出时的推广弹窗**。
 
 一个 PowerShell 脚本，无需安装、无需编译、无需常驻运行，支持恢复原样。
