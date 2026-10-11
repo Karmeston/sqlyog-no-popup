@@ -1,0 +1,194 @@
+{
+  "official_builds_checked": 8,
+  "checks_passed": 65,
+  "checks": [
+    "13.1.6: original recognized",
+    "13.1.6: exact patch",
+    "13.1.6: backup exact",
+    "13.1.6: patched recognized",
+    "13.1.6: repeat apply harmless",
+    "13.1.6: exact restore",
+    "13.1.6: repeat restore harmless",
+    "13.1.7: original recognized",
+    "13.1.7: exact patch",
+    "13.1.7: backup exact",
+    "13.1.7: patched recognized",
+    "13.1.7: repeat apply harmless",
+    "13.1.7: exact restore",
+    "13.1.7: repeat restore harmless",
+    "13.1.8: original recognized",
+    "13.1.8: exact patch",
+    "13.1.8: backup exact",
+    "13.1.8: patched recognized",
+    "13.1.8: repeat apply harmless",
+    "13.1.8: exact restore",
+    "13.1.8: repeat restore harmless",
+    "13.1.9: original recognized",
+    "13.1.9: exact patch",
+    "13.1.9: backup exact",
+    "13.1.9: patched recognized",
+    "13.1.9: repeat apply harmless",
+    "13.1.9: exact restore",
+    "13.1.9: repeat restore harmless",
+    "13.2.0: original recognized",
+    "13.2.0: exact patch",
+    "13.2.0: backup exact",
+    "13.2.0: patched recognized",
+    "13.2.0: repeat apply harmless",
+    "13.2.0: exact restore",
+    "13.2.0: repeat restore harmless",
+    "13.2.1: original recognized",
+    "13.2.1: exact patch",
+    "13.2.1: backup exact",
+    "13.2.1: patched recognized",
+    "13.2.1: repeat apply harmless",
+    "13.2.1: exact restore",
+    "13.2.1: repeat restore harmless",
+    "13.3.0: original recognized",
+    "13.3.0: exact patch",
+    "13.3.0: backup exact",
+    "13.3.0: patched recognized",
+    "13.3.0: repeat apply harmless",
+    "13.3.0: exact restore",
+    "13.3.0: repeat restore harmless",
+    "13.3.1: original recognized",
+    "13.3.1: exact patch",
+    "13.3.1: backup exact",
+    "13.3.1: patched recognized",
+    "13.3.1: repeat apply harmless",
+    "13.3.1: exact restore",
+    "13.3.1: repeat restore harmless",
+    "unknown file rejected: invalid-entry",
+    "unknown file rejected: altered-original",
+    "unknown file rejected: altered-patched",
+    "literal spaces and dollar sign in path",
+    "literal path restore",
+    "actual installation unchanged",
+    "official upgrade can be patched",
+    "official upgrade preserves old version backup",
+    "official upgrade creates separate exact backup"
+  ],
+  "status_process_benchmark": {
+    "v1-explicit": {
+      "median_ms": 370.5,
+      "samples_ms": [
+        374.5,
+        390.2,
+        370.5,
+        368.5,
+        368.3
+      ]
+    },
+    "v2-explicit": {
+      "median_ms": 395.0,
+      "samples_ms": [
+        397.2,
+        393.7,
+        396.3,
+        395.0,
+        394.3
+      ]
+    },
+    "v1-auto": {
+      "median_ms": 406.7,
+      "samples_ms": [
+        400.6,
+        406.7,
+        407.9,
+        415.4,
+        402.4
+      ]
+    },
+    "v2-auto": {
+      "median_ms": 426.9,
+      "samples_ms": [
+        424.1,
+        425.0,
+        426.9,
+        440.8,
+        427.6
+      ]
+    }
+  },
+  "apply_process_benchmark": {
+    "v1-apply": {
+      "median_ms": 453.2,
+      "samples_ms": [
+        438.8,
+        455.1,
+        454.1,
+        453.2,
+        453.1
+      ]
+    },
+    "v2-apply": {
+      "median_ms": 465.0,
+      "samples_ms": [
+        460.1,
+        450.3,
+        469.3,
+        465.0,
+        467.3
+      ]
+    }
+  },
+  "limitations": [
+    "Actual exit UI tests cover 13.3.0 and 13.3.1 without a database connection; connected sessions and unsaved queries were not tested.",
+    "Rollback after hardware/write failure not fault-injected."
+  ],
+  "supplemental_suites": {
+    "cli_regression_checks": 15,
+    "desktop_bridge_checks": 7,
+    "running_process_and_readonly_checks": 2
+  },
+  "actual_exit_suite": {
+    "tested_at": "2026-10-11T10:52:55.5002995+08:00",
+    "method": "Real SQLyog UI; separate executable copies and isolated -dir profiles; no database connection.",
+    "cases_passed": 6,
+    "builds": [
+      {
+        "version": "13.3.0",
+        "original_exit_promotion_visible": true,
+        "patched_exit_promotion_absent": true,
+        "patched_exit_code": 0,
+        "restored_exit_promotion_visible": true,
+        "backup_and_restored_hashes_match_official_original": true
+      },
+      {
+        "version": "13.3.1",
+        "original_exit_promotion_visible": true,
+        "patched_exit_promotion_absent": true,
+        "patched_exit_code": 0,
+        "restored_exit_promotion_visible": true,
+        "backup_and_restored_hashes_match_official_original": true
+      }
+    ],
+    "tested_script_sha256": "D2683AAB0C00D767E30A2E28664CB4E9BA4D4F7BE564D54001C3380F782FFF79",
+    "installed_executable_unchanged": true,
+    "existing_user_configuration_unchanged": true,
+    "user_configuration_files_hash_checked": 4,
+    "test_processes_remaining": 0,
+    "setup_note": "An original EXE failed to initialize with the first configuration directory containing non-ASCII characters; both versions initialized and completed testing with an ASCII-only isolated directory."
+  },
+  "release_packaging_suite": {
+    "tested_at": "2026-10-11T11:04:44.3992232+08:00",
+    "checks_passed": 13,
+    "checks": [
+      "sqlyog-no-popup.ps1: syntax",
+      "build.ps1: syntax",
+      "Renamed CLI recognizes original",
+      "Renamed CLI exact patch",
+      "Renamed CLI exact restore",
+      "Rebuilt desktop finds renamed script",
+      "Rebuilt desktop exact patch",
+      "Rebuilt desktop exact restore",
+      "Desktop Chinese text preserved by compiler",
+      "Desktop ZIP contains exactly four delivery files",
+      "Release checksum: sqlyog-no-popup.ps1",
+      "Release checksum: SQLyogExitPopupTool.zip",
+      "Installed SQLyog unchanged"
+    ],
+    "tested_script_sha256": "D2683AAB0C00D767E30A2E28664CB4E9BA4D4F7BE564D54001C3380F782FFF79",
+    "source_changes": "Renamed the script and the desktop script reference; normalized text line endings. Patching logic unchanged."
+  }
+}
